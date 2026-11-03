@@ -1,0 +1,45 @@
+body {
+    background-image: url("niche_4k_enhanced.jpg");
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+table th {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+}
+
+table tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tr:nth-of-type {
+    background-color: #f3f3f3;
+}
+
+.success {
+    margin-top: 18px;
+    color: #3c763d;
+    background-color: #dff0d8;
+    /* border-color: #d6e9c6; */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+}
