@@ -84,12 +84,12 @@
 
     <script>
         function confirmationEdit(id) {
-            window.location.href = "edit.php?id=" + id;
+            window.location.href = "edit/edit.php?id=" + id;
         }
 
         function confirmationDelete(id) {
             if(confirm("Confirm delete?")) {
-                window.location.href = "delete-action.php?id=" + id;
+                window.location.href = "delete/delete-action.php?id=" + id;
             }
         }
 
