@@ -52,6 +52,8 @@
             <th>#</th>
         </tr>
 
+    
+
     <?php
 
     $sql = "SELECT * FROM pets";
@@ -65,18 +67,36 @@
         echo "<td>{$row["name"]}</td>";
         echo "<td>{$row["age"]}</td>";
         echo "<td>{$row["type"]}</td>";
-        echo "<td><a href='edit.php?id={$row["id"]}'>Edit</a></td>";
-        echo "<td><a href='delete-action.php?id={$row["id"]}'>Delete</a></td>";
+        echo "<td><button onclick='confirmationEdit({$row["id"]})' id='editButton'>Edit</button></td>";
+        // echo "<td><a href='edit.php?id={$row["id"]}'>Edit</a></td>";
+        echo "<td><button onclick='confirmationDelete({$row["id"]})' id='deleteButton'>Delete</button></td>";
+        // echo "<td><a href='delete-action.php?id={$row["id"]}'>Delete</a></td>";
         echo "</tr>";
 
     }
-
+    
     // Free result set
     $result->free_result();
 
     $conn->close();
 
     ?>
+
+    <script>
+        function confirmationEdit(id) {
+            window.location.href = "edit.php?id=" + id;
+        }
+
+        function confirmationDelete(id) {
+            if(confirm("Confirm delete?")) {
+                window.location.href = "delete-action.php?id=" + id;
+            }
+        }
+
+        
+        // document.getElementById("deleteButton").addEventListener("click", header(delete-action.php?id={$row["id"]}));
+    </script>
+
     </table>
 
 </body>
