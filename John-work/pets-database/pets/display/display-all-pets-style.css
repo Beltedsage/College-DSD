@@ -1,5 +1,5 @@
 body {
-    background-image: url("niche_4k_enhanced.jpg");
+    background-image: url("../img-assets/niche_4k_enhanced.jpg");
     background-size: cover;
     background-attachment: fixed;    
 }
@@ -29,7 +29,7 @@ table tr {
     border-bottom: 1px solid #dddddd;
 }
 
-table tr:nth-of-type {
+table tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 

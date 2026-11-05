@@ -12,7 +12,7 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error); // Error message
     }
-    echo "Connected successfully<br>";
+    // echo "Connected successfully<br>";
 ?>
 
 <!DOCTYPE html>
