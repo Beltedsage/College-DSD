@@ -30,6 +30,9 @@
 
         echo "<br>You have successfully added <strong>" . $_POST['name'] . "</strong> to the database."
         ?>
+        
+        <br>
+        <button type="button"><a href="http://localhost/github/College-DSD/John-work/pets-database/pets/">Return</a></button> 
 
 </body>
 </html>

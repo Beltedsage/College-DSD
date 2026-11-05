@@ -34,6 +34,13 @@
 <body>
     
     <h1>Registered Pets</h1>
+    <button type="button"><a href="http://localhost/github/College-DSD/John-work/pets-database/pets/">Return</a></button> 
+
+<?php if(isset($_GET["msg"]) && $_GET["msg"]=="delete-success"): ?>
+    <div class="success">
+        Delete successful.
+    </div>
+<?php endif ?>
 
     <table>
         <tr>
@@ -41,6 +48,7 @@
             <th>Name</th>
             <th>Age</th>
             <th>Type</th>
+            <th>#</th>
             <th>#</th>
         </tr>
 
@@ -58,6 +66,7 @@
         echo "<td>{$row["age"]}</td>";
         echo "<td>{$row["type"]}</td>";
         echo "<td><a href='edit.php?id={$row["id"]}'>Edit</a></td>";
+        echo "<td><a href='delete-action.php?id={$row["id"]}'>Delete</a></td>";
         echo "</tr>";
 
     }
