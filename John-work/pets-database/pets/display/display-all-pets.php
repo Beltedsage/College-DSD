@@ -25,6 +25,7 @@
 
     <!-- External Style Sheet -->
     <link rel="stylesheet" type="text/css" href="display-all-pets-style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 
     <style>
         /* body {background-image: url("niche_4k_enhanced.jpg"); } */
@@ -32,6 +33,10 @@
 
 </head>
 <body>
+
+    <?php
+        include "../partials/menu.php";
+    ?>
     
     <h1>Registered Pets</h1>
     <button type="button"><a href="http://localhost/github/College-DSD/John-work/pets-database/pets/">Return</a></button> 

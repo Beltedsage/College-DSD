@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
     <style>
 
         body {
@@ -59,11 +62,15 @@
 </head>
 <body>
 
+    <?php
+        include "partials/menu.php";
+    ?>
+
     <!-- Works Deliciously -->
 
     <div class="container">
         <div class="temp">
-        <div class="textual"><a href="add/add-a-pet.html"><strong>Add a pet</strong></a></div>
+        <div class="textual"><a href="add/add-a-pet.php"><strong>Add a pet</strong></a></div>
         <div class="textual"><a href="display/display-all-pets.php"><strong>Display all pets</strong><br></a></div>
         </div>
         <!-- <a href="edit-action.php">EDIT TABLE<br></a> -->

@@ -3,6 +3,9 @@
 <head>
     <title>Document</title>
 
+    <link rel="stylesheet" type="text/css" href="../style.css">
+
+
     <style>
         body {
             background-image: url("../img-assets/niche_4k_enhanced.jpg");
@@ -13,6 +16,10 @@
 </head>
 
 <body>
+    
+    <?php
+        include "../partials/menu.php";
+    ?>
     
     <form action="add-a-pet-action.php" method="post">
 
