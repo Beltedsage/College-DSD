@@ -1,0 +1,7 @@
+To-do List:
+- 200+ cute pets
+- Search - animal type
+- Pagination - SQL LIMIT
+Order BY DATETIME
+Highlight item in List
+-php?highligh_id=17 (???)
