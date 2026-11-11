@@ -22,6 +22,8 @@
     ?>
     
     <form action="add-a-pet-action.php" method="post">
+        
+        <h1>Add a Pet</h1>
 
         <button type="button"><a href="http://localhost/github/College-DSD/John-work/pets-database/pets/">Return</a></button> 
 

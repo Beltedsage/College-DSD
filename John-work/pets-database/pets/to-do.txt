@@ -1,6 +1,7 @@
 To-do List:
 - 200+ cute pets
 - Search - animal type
+    - Add the table display to db.php (???)
 - Pagination - SQL LIMIT
 Order BY DATETIME
 Highlight item in List

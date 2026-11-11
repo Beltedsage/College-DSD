@@ -68,6 +68,8 @@
 
     <!-- Works Deliciously -->
 
+    <h1>Home</h1>
+
     <div class="container">
         <div class="temp">
         <div class="textual"><a href="add/add-a-pet.php"><strong>Add a pet</strong></a></div>
