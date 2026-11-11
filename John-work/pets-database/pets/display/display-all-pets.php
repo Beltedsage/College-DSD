@@ -29,7 +29,7 @@
     <title>Display Pets Stored in the Pets MySQL Table</title>
 
     <!-- External Style Sheet -->
-    <link rel="stylesheet" type="text/css" href="display-all-pets-style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="display-all-pets-style.css"> -->
     <link rel="stylesheet" type="text/css" href="../style.css">
 
     <style>

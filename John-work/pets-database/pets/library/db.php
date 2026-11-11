@@ -17,4 +17,14 @@ function connect() {
     return $conn;
 }
 
+function find_pet($search, $conn) {
+    $query = "SELECT * FROM pets WHERE name LIKE ?";
+    $stmt = $conn->prepare($query);
+
+    $search = "{$_POST['search']}%";
+    $stmt->bind_param("s", $search);
+    $stmt->execute();
+    return $stmt->get_result();
+}
+
 ?>
