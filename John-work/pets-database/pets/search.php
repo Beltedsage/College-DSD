@@ -22,14 +22,14 @@ if (isset($_POST['search'])) {
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<?php include "partials/menu.php"; ?>
+<?php 
+    include "partials/menu.php";
+?>
     <h1>Search</h1>
     <form action="search.php" method="POST">
-        <p>
-            Enter part of a pets name:
-            <input type="text" name="search" value="<?= $user_search_string ?>">
-            <input type="submit" value="Find">
-        </p>
+        <!-- <label for="search">Enter part of a pet's name:</label> -->
+        <input type="text" name="search" placeholder="Enter a pet's name" value="<?= $user_search_string ?>">
+        <input type="submit" value="Search">
     </form>
 
 <?php if ($show_results): ?>
@@ -44,16 +44,7 @@ if (isset($_POST['search'])) {
                 <th></th>
             </tr>
 
-        <?php while ($row = $result->fetch_array(MYSQLI_ASSOC)): ?>
-            <tr>
-                <td><?= $row["id"] ?></td>
-                <td><?= $row["name"] ?></td>
-                <td><?= $row["age"] ?></td>
-                <td><?= $row["type"] ?></td>
-                <td><a href="display/edit/edit.php?id=<?= $row["id"] ?>">Edit</a></td>
-                <td><a href="display/delete/delete-action.php?id=<?= $row["id"] ?>">Delete</a></td>
-            </tr>
-        <?php endwhile; ?>
+        <?php table($result, $conn) ?>
 
         </table>
     

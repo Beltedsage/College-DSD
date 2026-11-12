@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
-
+    <title>AddPet</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
-
-
-    <style>
-        body {
-            background-image: url("../img-assets/niche_4k_enhanced.jpg");
-            background-size: cover;
-            background-attachment: fixed;    
-        }
-    </style>
 </head>
 
 <body>
