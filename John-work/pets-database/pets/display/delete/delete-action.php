@@ -1,6 +1,6 @@
 <?php
 
-include "library/db.php";
+include "../../library/db.php";
 
 $conn = connect();
 
@@ -9,6 +9,6 @@ $stmt = $conn->prepare($query);
 $stmt->bind_param("i", $_GET["id"]);
 $stmt->execute();
 
-header('Location: http://localhost/github/College-DSD/John-work/pets-database/pets/display-all-pets.php?msg=delete-success');
+header('Location: http://localhost/github/College-DSD/John-work/pets-database/pets/display/display-all-pets.php?msg=delete-success');
 
 ?>

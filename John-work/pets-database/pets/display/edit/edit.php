@@ -12,7 +12,7 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error); // Error message
     }
-    echo "Connected successfully<br>";
+    // echo "Connected successfully<br>";
 
     $sql = "SELECT * FROM pets WHERE id=?";
     $stmt = $conn->prepare($sql);
@@ -28,6 +28,7 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="display-all-pets-style.css">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -47,6 +48,8 @@
 
 </head>
 <body>
+
+    <?php include "../../partials/menu.php" ?>
 
     <h1>Edit <?= $pet['name'] ?></h1>
 

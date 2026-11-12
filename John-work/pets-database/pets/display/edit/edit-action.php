@@ -18,5 +18,5 @@
 
     //echo $_POST["id"];
 
-    header("Location: http://localhost/Programming/gubbins/pets/edit.php?id={$_POST["id"]}&msg=success");
+    header("Location: http://localhost/Github/College-DSD/John-work/pets-database/pets/display/display-all-pets.php?id={$_POST["id"]}&msg=success");
 ?>

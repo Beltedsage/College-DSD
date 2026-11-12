@@ -20,12 +20,16 @@
     <?php
         include "../partials/menu.php";
     ?>
+
+    <?php if(isset($_GET["msg"]) && $_GET["msg"]=="success"): ?>
+        <div class="success">
+            Updated successfully.
+        </div>
+    <?php endif ?>
     
     <form action="add-a-pet-action.php" method="post">
         
         <h1>Add a Pet</h1>
-
-        <button type="button"><a href="http://localhost/github/College-DSD/John-work/pets-database/pets/">Return</a></button> 
 
         <p> Enter Pet Name: <input type="text" name="name" /> </p>
         <p> Enter Pet Age: <input type="number" name="age" /> </p>

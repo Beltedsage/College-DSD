@@ -34,7 +34,7 @@
                 ". . ."
                 ". temp ."
                 ". . ."; 
-            height: 750px;
+            height: 500px;
             }
         .temp { 
             grid-area: temp;
@@ -49,7 +49,8 @@
             font-size: 60px;
             margin-top: 18px;
             /* color: #3c763d; */
-            background-color: #84B535;
+            /* background-color: #84B535; */
+            background-color: #009879;
             /* border-color: #d6e9c6; */
             padding: 15px;
             margin-bottom: 20px;

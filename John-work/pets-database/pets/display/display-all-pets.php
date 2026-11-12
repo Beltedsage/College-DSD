@@ -18,6 +18,27 @@
         die("Connection failed: " . $conn->connect_error); // Error message
     }
     // echo "Connected successfully<br>";
+
+    $perPage = 10; // rows per page
+
+    // Which page are we on? Defaults to 1, and is forced to be a whole number
+    $page = isset($_GET["page"]) ? (int)$_GET["page"] : 1;
+    if ($page < 1) {
+        $page = 1;
+    }
+
+    // How many rows are there in total?
+    $countResult = $conn->query("SELECT COUNT(*) AS total FROM pets");
+    $totalRows = $countResult->fetch_assoc()["total"];
+    $totalPages = max(1, ceil($totalRows / $perPage));
+
+    // Don't let someone go past the last page
+    if ($page > $totalPages) {
+        $page = $totalPages;
+    }
+
+    // Where does this page start?
+    $offset = ($page - 1) * $perPage;
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +65,12 @@
     ?>
     
     <h1>Registered Pets</h1>
-    <button type="button"><a href="http://localhost/github/College-DSD/John-work/pets-database/pets/">Return</a></button> 
+
+<?php if(isset($_GET["msg"]) && $_GET["msg"]=="success"): ?>
+    <div class="success">
+        Updated successfully.
+    </div>
+<?php endif ?>
 
 <?php if(isset($_GET["msg"]) && $_GET["msg"]=="delete-success"): ?>
     <div class="success">
@@ -66,8 +92,12 @@
 
     <?php
 
-    $sql = "SELECT * FROM pets";
-    $result = $conn->query($sql);
+    $stmt = $conn->prepare("SELECT * FROM pets ORDER BY id LIMIT ? OFFSET ?");
+    $stmt->bind_param("ii", $perPage, $offset);
+    $stmt->execute();
+    $result = $stmt->get_result();    
+
+    $stmt->close();
 
     while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
 
@@ -108,6 +138,32 @@
     </script>
 
     </table>
+
+    <?php
+        $window = 2;
+        $start = max(1, $page - $window);
+        $end   = min($totalPages, $page + $window);
+    ?>
+
+    <div class="pagination">
+        <?php if ($page > 1): ?>
+            <a href="?page=1">&laquo; First</a>
+            <a href="?page=<?= $page - 1 ?>">&lsaquo; Previous</a>
+        <?php endif; ?>
+
+        <?php for ($i = $start; $i <= $end; $i++): ?>
+            <?php if ($i == $page): ?>
+                <strong><?= $i ?></strong>
+            <?php else: ?>
+                <a href="?page=<?= $i ?>"><?= $i ?></a>
+            <?php endif; ?>
+        <?php endfor; ?>
+
+        <?php if ($page < $totalPages): ?>
+            <a href="?page=<?= $page + 1 ?>">Next &rsaquo;</a>
+            <a href="?page=<?= $totalPages ?>">Last &raquo;</a>
+        <?php endif; ?>
+    </div>
 
 </body>
 </html>

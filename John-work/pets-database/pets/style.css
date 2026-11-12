@@ -16,6 +16,14 @@
     background-color: black;
 }
 
+.navigation-bar a.active {
+    background-color: #009879; /* matches your table header green */
+}
+
+.navigation-bar a.active:hover {
+    background-color: #005d4a;
+}
+
 body {
     background-image: url("img-assets/niche_4k_enhanced.jpg");
     background-size: cover;
@@ -52,6 +60,7 @@ table tr:nth-of-type(even) {
 }
 
 .success {
+    display: inline-block;
     margin-top: 18px;
     color: #3c763d;
     background-color: #dff0d8;
@@ -99,3 +108,5 @@ table tr:nth-of-type(even) {
   text-decoration: none;
   cursor: pointer;
 }
+
+.pagination a, .pagination strong { margin: 0 4px; padding: 4px 8px; }

@@ -29,8 +29,12 @@
         $stmt->bind_param("sis", $_POST['name'], $_POST['age'], $_POST['type']);
         $stmt->execute();
 
-        echo "<br>You have successfully added <strong>" . $_POST['name'] . "</strong> to the database."
+        echo "<br>You have successfully added <strong>" . $_POST['name'] . "</strong> to the database.";
+
+        header('Location: http://localhost/github/College-DSD/John-work/pets-database/pets/add/add-a-pet.php?msg=success');
         ?>
+
+        
         
         <br>
         <button type="button"><a href="http://localhost/github/College-DSD/John-work/pets-database/pets/">Return</a></button> 

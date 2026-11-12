@@ -50,8 +50,8 @@ if (isset($_POST['search'])) {
                 <td><?= $row["name"] ?></td>
                 <td><?= $row["age"] ?></td>
                 <td><?= $row["type"] ?></td>
-                <td><a href="edit.php?id=<?= $row["id"] ?>">Edit</a></td>
-                <td><a href="delete-action.php?id=<?= $row["id"] ?>">Delete</a></td>
+                <td><a href="display/edit/edit.php?id=<?= $row["id"] ?>">Edit</a></td>
+                <td><a href="display/delete/delete-action.php?id=<?= $row["id"] ?>">Delete</a></td>
             </tr>
         <?php endwhile; ?>
 
