@@ -26,7 +26,7 @@
     <a href="/Github/College-DSD/John-work/pets-database/pets/search.php"
        class="<?= $current == 'search.php' ? 'active' : '' ?>">Search</a>
 
-    <form action="search.php" method="POST">
+    <form action="/Github/College-DSD/John-work/pets-database/pets/search.php" method="POST">
             <!-- <label for="search">Enter part of a pet's name:</label> -->
             <input type="text" name="search" placeholder="Enter a pet's name" value="<?= $user_search_string ?>">
             <input type="submit" value="Search">
