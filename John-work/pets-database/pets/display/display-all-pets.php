@@ -4,20 +4,9 @@
 <!-- THANK YOU PARDS -->
 
 <?php
+    include "../library/db.php";
 
-    // Login gubbins
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, "pets");
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error); // Error message
-    }
-    // echo "Connected successfully<br>";
+    $conn = connect();
 
     $perPage = 10; // rows per page
 
@@ -55,7 +44,6 @@
 
     <?php
         include "../partials/menu.php";
-        include "../library/db.php";
     ?>
     
     <h1>Registered Pets</h1>

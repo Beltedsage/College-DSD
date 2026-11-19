@@ -32,6 +32,8 @@ if (isset($_POST['search'])) {
         <input type="submit" value="Search">
     </form>
 
+    <p id="autofills"></p> <!-- do one day please -->
+
 <?php if ($show_results): ?>
 
         <table>
