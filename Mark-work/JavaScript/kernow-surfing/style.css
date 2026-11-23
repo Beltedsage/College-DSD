@@ -1,8 +1,36 @@
 .card {
-    border: 2px solid red;
-    display: flex;
+    border: 2px solid darkcyan;
+    display: inline-block;
+    background-color: lightblue;
     
 }
+
+.card:hover {
+    border: 2px solid rgb(59, 59, 130);
+    background-color: darkcyan;
+}
+
+button {
+    margin: 1px;
+    /* border: 5px solid green; */
+}
+
+#details2 {
+    display: flex;
+    margin: 1px;
+}
+
+#left {
+    text-align: right;
+}
+
+/* #left, #right {
+    margin: 5px;
+} */
+
+/* #book, #reset {
+    text-align: left;
+} */
 
 /* body {
     background: red;
